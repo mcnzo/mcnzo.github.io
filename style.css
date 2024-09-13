@@ -1,0 +1,104 @@
+#grid-container {
+    display: grid; /* NEW */
+    grid-template-areas: 
+    "top top top top"
+    "left header header right"
+    "left menu main right"
+    "left footer footer right"
+    "bottom bottom bottom bottom"
+    ;
+    grid-template-columns: 1fr 1.5fr 7fr 1fr;
+    grid-gap: 10px;
+   }
+
+#top, #bottom {
+    padding: 5px;
+    color: white;
+}
+
+#left, #right {
+    padding: 1px;
+    color: white;
+}
+
+header {
+ /* ... */
+    display: flex;
+    flex-direction: row;
+    grid-area: header; /* NEW */
+    padding: 5px;
+    background-color: rgb(163, 201, 211);
+    color: #000000;
+    text-align: left;
+    font-family: Helvetica, Arial, sans-serif;
+    padding-left: 10px;
+    border: solid 3px rgb(146, 167, 179);
+    align-items: center;
+}
+
+#menu {
+ /* ... */
+    grid-area: menu; /* NEW */
+    padding: 32px;
+    background-color: rgb(163, 201, 211);
+    border-left: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    border: solid 3px rgb(146, 167, 179);
+    color: #000000;
+    padding-top: 10px;
+}
+
+#main-content {
+ /* ... */
+    padding: 32px;
+    grid-area: main;
+    font-family: Helvetica, Arial, sans-serif;
+}
+footer {
+    grid-area: footer;
+    padding: 5px;
+    background-color: rgb(163, 201, 211);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+    padding-left: 30px;
+    border: solid 3px rgb(146, 167, 179);
+
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+a:link { 
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  } 
+  a:visited { 
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  } 
+  a:hover { 
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  } 
+  a:active { 
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+img {
+    width: 110px;
+    float: left;
+}
